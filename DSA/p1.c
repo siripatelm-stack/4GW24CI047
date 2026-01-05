@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+/*void create(struct);
+void read(struct,int);
+void display(struct,int);
+void freememory(struct,size);*/
+
 struct Day{
     int date;
     char* dayname;
@@ -10,11 +15,11 @@ void create(struct Day *day){
     day->dayname = (char*) malloc (40 * sizeof(char));
     day->activity = (char*) malloc (100 * sizeof(char));
     printf("enter the day name: ");
-    scanf("%39s", day->dayname);
+    scanf("%s", day->dayname);
     printf("enter the date: ");
     scanf("%d", &day->date);
     printf("enter the activity: ");
-    scanf("%99s", day->activity);
+    scanf("%s", day->activity);
 }
 void read(struct Day *calender, int size){
     for(int i=0;i<size;i++){

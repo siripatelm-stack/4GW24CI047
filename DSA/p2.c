@@ -1,6 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+/*void readstring(str,size_t maxlen,const char*label)
+void stringlength(const char*str)
+void ismatch(str,pat,pos)
+void replacestring(str,pat,rep,result)
+*/
 void readString(char str[],size_t maxlen , const char* label)
 {
     int c;
