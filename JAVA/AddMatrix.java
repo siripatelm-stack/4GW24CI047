@@ -31,7 +31,7 @@ public class AddMatrix {
 				result[i][j]=matrix1[i][j]+matrix2[i][j];
 			}
 		}
-		//displaying the result
+		//display the result
 		System.out.println("\nResultant Matrix after Addition:");
 		for (int i=0;i<n;i++) {
 			for (int j=0;j<n;j++) {
