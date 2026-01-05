@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class AddMatrix {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner sc =new Scanner(System.in);
 		//input for matrix size N
 		System.out.println("Enter the order N of the matrices: ");
