@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class AddMatrix {
 	public static void main(String[] args) {
-		
+		// TODO Auto-generated method stub
 		Scanner sc =new Scanner(System.in);
 		//input for matrix size N
 		System.out.println("Enter the order N of the matrices: ");
@@ -31,7 +31,7 @@ public class AddMatrix {
 				result[i][j]=matrix1[i][j]+matrix2[i][j];
 			}
 		}
-		//display the result
+		//displaying the result
 		System.out.println("\nResultant Matrix after Addition:");
 		for (int i=0;i<n;i++) {
 			for (int j=0;j<n;j++) {
