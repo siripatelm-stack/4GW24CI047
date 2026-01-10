@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
-
 struct Node{
     int data;
     struct Node *left,*right;
@@ -40,13 +38,13 @@ void inorder(struct Node *root)
 }
 void preorder(struct Node *root)
 {
-    if(root!=NULL){
+    if(root!=NULL)
+    {
         printf("%d ",root->data);
         preorder(root->left);
         preorder(root->right);
     }
 }
-
 void postorder (struct Node*root){
     if(root!=NULL){
         postorder(root->left);
@@ -73,7 +71,7 @@ int main()
     int choice ,key;
 
     //Initial BST creation with given integers
-    int arr[]={6,9,5,2,8,15,24,15,24,14,7,8,5,2};
+    int arr[]={6,9,5,2,8,15,24,14,7,8,5,2};
     int n=sizeof(arr)/sizeof(arr[0]);
     for (int i=0;i<n;i++)
         root=insert(root,arr[i]);
