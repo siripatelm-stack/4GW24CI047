@@ -17,15 +17,15 @@ struct Student *head =NULL;
 struct Student *createNode()
 {
     struct Student *newNode =(struct Student*) malloc(sizeof(struct Student));
-    printf("USN: ");
+    printf("USN: \n");
     scanf("%s",newNode -> usn);
-    printf("Name: ");
+    printf("Name: \n");
     scanf("%s",newNode->name);
-    printf("Programme: ");
+    printf("Programme: \n");
     scanf("%s",newNode->programme);
-    printf("Semester: ");
-    scanf("%d",newNode->sem);
-    printf("Phone no: ");
+    printf("Semester: \n");
+    scanf("%d",&newNode->sem);
+    printf("Phone no: \n");
     scanf("%s",newNode->phno);
     newNode->next=NULL;
     return newNode;
@@ -34,9 +34,10 @@ struct Student *createNode()
 void createList(int n){
     for (int i=0;i<n;i++)
     {
-        struct Student *newNode=createNode;
+        struct Student *newNode=createNode();
         newNode->next=head;
         head=newNode;
+        printf("\n");
     }
 }
 //Display SLL and count nodes
@@ -52,7 +53,7 @@ void displayList()
     printf("\n-- Student List --\n");
     while(temp !=NULL)
     {
-        printf("USN: %s,Name: %s,Programme: %s,Sem: %d,PhNo: %s",
+        printf("USN: %s,Name: %s,Programme: %s,Sem: %d,PhNo: %s\n",
         temp->usn,temp->name,temp->programme,temp->sem,temp->phno);
         temp =temp->next;
         count++;
@@ -115,12 +116,12 @@ int main()
         printf("\n--- MENU ---\n");
         printf("1. Create SLL of N Students (Front Insertion)\n");
         printf("2. Display and Count Nodes\n");
-        printf("3. Insert at end");
-        printf("4. Delete at end");
-        printf("5. Delete at Front");
-        printf("6. Exit");
+        printf("3. Insert at end\n");
+        printf("4. Delete at end\n");
+        printf("5. Delete at Front\n");
+        printf("6. Exit\n");
         printf("Enter your Choice: ");
-        scanf("%d",choice);
+        scanf("%d",&choice);
 
         switch(choice)
         {
@@ -128,8 +129,25 @@ int main()
                 printf("Enter number of Students: ");
                 scanf("%d",&n);
                 createList(n);
+                break;
             case 2:
-
+                displayList();
+                break;
+            case 3:
+                insertEnd();
+                break;
+            case 4:
+                deleteEnd();
+                break;
+            case 5:
+                deleteFront();
+                break;
+            case 6:
+                exit(0);
+                break;
+            default:
+                printf("Invalid choice!\n");
         }
     }
+    return 0;
 }

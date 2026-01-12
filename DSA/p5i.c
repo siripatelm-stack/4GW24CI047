@@ -41,7 +41,7 @@ int evaluatePostfix(char *exp)
    {
     char ch=exp[i];
     if(isdigit(ch)){
-        push(ch='0');
+        push(ch-'0');
     }
     else{
         int val2=pop();
@@ -66,10 +66,11 @@ int evaluatePostfix(char *exp)
                 result=val1%val2;
                 break;
             case '^':
-                result=val1^val2;
+                //result=val1^val2; BITWISE XOR not exponential
+                result=power(val1,val2);
                 break;
             default:
-                printf("Invalid operator: %ch\n",ch);
+                printf("Invalid operator: %c\n",ch);
                 return -1;
         }
         push(result);

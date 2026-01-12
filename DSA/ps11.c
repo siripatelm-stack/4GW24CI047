@@ -35,6 +35,7 @@ void DFS(int v)
     {
         if(a[v][i]==1 && visited[i]==0)
         {
+            //printf("[Going from %d to %d] ",v,i);  // DEBUG: shows which edges are taken
             DFS(i);
         }
     }
@@ -57,7 +58,9 @@ int main()
     printf("\nEnter the starting vertex: ");
     scanf("%d",&start);
 
-    printf("\n==>1.BFS:Print all nodes reachable from a given starting node");
+    while(1)
+    {
+        printf("\n==>1.BFS:Print all nodes reachable from a given starting node");
     printf("\n==>2.DFS:Print all nodes reachable from a given starting node");
     printf("\n==>3.Exit");
     printf("\nEnter your choice: ");
@@ -82,5 +85,6 @@ int main()
         default:
             printf("\nEnter valid choice.");
             break;
+    }
     }
 }

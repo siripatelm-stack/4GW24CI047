@@ -99,7 +99,7 @@ void display()
 {
     if(head==NULL)
     {
-        printf("List is empty!");
+        printf("List is empty!\n");
         return;
     }
     Employee *temp=head;
@@ -126,7 +126,7 @@ void dequeDemo()
 
     //Insert at front
     printf("\nInsert at front:\n");
-    insertFront(createNode(0));
+    insertFront(createNode());
     display();
 
     //Delete from rear

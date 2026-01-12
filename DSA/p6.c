@@ -16,7 +16,7 @@ void insert(char value){
     //Check Overflow 
     if ((front == 0 && rear ==MAX-1)||(rear+1)%MAX== front)
     {
-        printf("Circular Queue Overflow! Cannot insert %d ->\n",value);
+        printf("Circular Queue Overflow! Cannot insert %d\n",value);
         return;
     }
     
@@ -65,7 +65,7 @@ void display()
             break;
         i=(i+1)%MAX;
     }
-    printf("%d",queue[0]);
+    printf("%d",queue[front]);
     printf("\n");
 }
 void demonstrateOverflow()
@@ -111,7 +111,7 @@ int main()
             case 2:
                 value=delete();
                 if (value!='\0')
-                    printf("Deleted: %d ->\n",value);
+                    printf("Deleted: %d\n",value);
                 break;
 
             case 3:
@@ -129,4 +129,5 @@ int main()
             default: printf("Invalid choice! Try agian.\n");
         }
     }
+    return 0;
 }
