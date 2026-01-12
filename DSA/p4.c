@@ -3,7 +3,7 @@
 void evaluate();
 void push (char item);
 char pop();
-int prec(char);
+int prec(char item);
 char infix[30],postfix[30],stack[30];
 int top =-1;
 void evaluate()
