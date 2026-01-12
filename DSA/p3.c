@@ -113,7 +113,7 @@ void isOverflow()
 {
     if(top==MAX-1)
     {
-        printf("Overflow occurs!Stack is full");
+        printf("Overflow occurs!Stack is full\n");
     }
     else
     {
@@ -122,9 +122,9 @@ void isOverflow()
 }
 void isUnderflow(){
     if(top==-1){
-        printf("Underflow occurs !Stack is Empty");
+        printf("Underflow occurs !Stack is Empty\n");
     }
     else{
-        printf("No underflow");
+        printf("No underflow\n");
     }
 }
