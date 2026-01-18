@@ -29,7 +29,7 @@ void evaluate()
                 }
                 break;
                 case '+':
-                case '_':
+                case '-':
                 case '*':
                 case '/':
                 case '^':
@@ -93,9 +93,9 @@ int prec(char symbol){
 }
 
 void main(){
-    printf("\nEnter the validinfix expression :");
+    printf("\nEnter the valid infix expression :");
     scanf("%s",infix);
     evaluate();
-    printf("\nThe enterd infix expression is: %s \n",infix);
+    printf("\nThe enter infix expression is: %s \n",infix);
     printf("\nThe corresponding postfix expression: %s\n",postfix);
 }
