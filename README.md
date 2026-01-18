@@ -1,2 +1,1 @@
-III semester
-##III sem CSE(AI&ML)
+III semester CSE(AI&ML), GSSSIETW
